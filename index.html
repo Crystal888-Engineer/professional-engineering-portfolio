@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/Styles.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--SWIPPER CSS-->
+    <link
+    rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <title>A.I. Specialist Portfolio</title>
+</head>
+<body>
+    <!--PRE LOADER-->
+    <!--TOP HEADER DESIGN-->
+
+    <header class="top-header">
+        <!-- SOCIAL ICONS TOP HEADER -->
+        <div class="top-header-div">
+            <ul class="social-icon">
+                <li><a href="#"><i class="fa-brands fa-github fa-2xl"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- LOCATION ICON TOP HEADER -->
+        <div class="location">
+            <p><i class="fa-solid fa-location-arrow fa-2xl"></i><span class="span-text"> Location: </span><span class="span-location-text">Cape Town, South Africa</span></p>
+        </div>  
+        
+        <!-- EMAIL ICON TOP HEADER -->
+        <div class="email">
+            <p><i class="fa-solid fa-envelope fa-2x"></i><span class="span-text"> Email: </span><a href="mailto:crystalj@smartflow888.co.za" class="email-link"> <span class="span-email-text">crystalj@smartflow888.co.za</span></a></p>
+        </div>
+    </header>
+
+    <!--NAVIGATION SECTION-->
+    <nav class="navbar">
+        <a href="#" class="logo">Microsoft Certified Professional</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i> <!-- This is the Burger menu Icon -->
+        <div class="navbar-nav">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Career</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#services">Services</a>
+            <a href="#charity">Charity</a>
+        </div>
+    </nav>
+
+    <!-- ************************************ HOME BANNER DESIGN ******************************************** -->
+
+    <section class="home" id="home">
+        <div class="home-image">
+            <div class="img-box">
+                <img src="Images/Portfolio Image Header.png" alt="Crystal Jacobs">
+            </div>
+<!--
+            <div class="liquid-shape">
+                    <svg viewBox="0 0 550 550" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                        <path fill="#754ef9">
+                                <animate attributeName="d"
+                                    dur="20000ms"
+                                    repeatCount="indefinite"
+                                    values="
+                                    M436,299.5Q404,349,368.5,390.5Q333,432,277,443Q221,454,172.5,424.5Q124,395,99,348.5Q74,302,90,255Q106,208,122,164.5Q138,121,181,95Q224,69,272,82.5Q320,96,348,132.5Q376,169,422,209.5Q468,250,436,299.5Z;
+                                    M426.5,298Q400,346,374,405Q348,464,281.5,478.5Q215,493,154,462Q93,431,54,375Q15,319,26.5,253.5Q38,188,68.5,132Q99,76,161,68.5Q223,61,274.5,72Q326,83,363.5,118Q401,153,427,201.5Q453,250,426.5,298Z;
+                                    M422,308.5Q432,367,374,380.5Q316,394,266,440Q216,486,152,461.5Q88,437,57,376.5Q26,316,63,261Q100,206,105.5,148Q111,90,164,55.5Q217,21,277,40.5Q337,60,380.5,99Q424,138,418,194Q412,250,422,308.5Z;
+                                    M425.5,296Q393,342,359.5,379Q326,416,270.5,453Q215,490,153,461.5Q91,433,79.5,368Q68,303,65,249Q62,195,79,133.5Q96,72,159,62.5Q222,53,268.5,80.5Q315,108,367,124.5Q419,141,438.5,195.5Q458,250,425.5,296Z;
+                                    M411.55625,295.60161Q391.40643,341.20321,358.70321,379Q326,416.79679,275.28071,421.52697Q224.56143,426.25716,177.70035,406.92019Q130.83927,387.58323,86.67107,349.27554Q42.50286,310.96785,68.18714,257.36625Q93.87142,203.76464,113.26178,158.99714Q132.65213,114.22963,175.3341,71.66303Q218.01607,29.09644,270.89036,58.98679Q323.76464,88.87715,374.96785,112.54822Q426.17107,136.21929,428.93857,193.10964Q431.70608,250,411.55625,295.60161Z;
+                                    M423.64097,305.40595Q422.28193,360.81189,387.69647,417.58105Q353.11101,474.35021,284.32048,483.36298Q215.52996,492.37576,178.78634,433.66651Q142.04273,374.95727,124.47422,333.55132Q106.90572,292.14538,62.74361,237.08128Q18.58151,182.01718,65.69252,136.82489Q112.80353,91.6326,168.02996,77.64956Q223.25639,63.66651,267.85044,88.95286Q312.4445,114.2392,364.48723,128.79053Q416.52996,143.34185,420.76498,196.67092Q425,250,423.64097,305.40595Z;
+                                    M423.64097,305.40595Q422.28193,360.81189,387.69647,417.58105Q353.11101,474.35021,284.32048,483.36298Q215.52996,492.37576,178.78634,433.66651Q142.04273,374.95727,124.47422,333.55132Q106.90572,292.14538,62.74361,237.08128Q18.58151,182.01718,65.69252,136.82489Q112.80353,91.6326,168.02996,77.64956Q223.25639,63.66651,267.85044,88.95286Q312.4445,114.2392,364.48723,128.79053Q416.52996,143.34185,420.76498,196.67092Q425,250,423.64097,305.40595Z;
+                                    M436,299.5Q404,349,368.5,390.5Q333,432,277,443Q221,454,172.5,424.5Q124,395,99,348.5Q74,302,90,255Q106,208,122,164.5Q138,121,181,95Q224,69,272,82.5Q320,96,348,132.5Q376,169,422,209.5Q468,250,436,299.5Z;
+                                    "
+                                >
+                                </animate>
+                        </path>
+                    </svg>
+            </div>
+            -->
+        </div>
+        
+        <div class="home-content">
+            <h1>Hello! I'm <span class="name-purple">Crystal Jacobs</span></h1>
+            <div class="change-text">
+                <h3 class="">I'm a&nbsp;</h3>
+                <h3>
+                    <span class="word">Solutions&nbsp;Architect...</span>
+                    <span class="word">Power&nbsp;Platforms&nbsp;Engineer...</span>
+                    <span class="word">Power&nbsp;BI&nbsp;Data&nbsp;Analyst...</span>
+                    <span class="word">A.I.&nbsp;Engineer...</span>
+                    <span class="word">Developer...</span>
+                </h3>
+            </div>
+    
+            <p>As a Senior Automation Engineer, Data Analyst, and Developer lead, I specialize in process optimization, automation, and custom development. 
+                With extensive experience across IT and Manufacturing, I excel in delivering innovative, scalable solutions. 
+                As a Microsoft Certified Professional, I'm advancing my expertise to become a Certified Solutions Architect and pursuing further qualifications
+                in Data Science, Python, and AI. My diverse background in Agriculture, Manufacturing, and IT equips me to handle complex challenges on a global scale.
+            </p>
+    
+            <div class="btn-box">
+                <a href=".vscode\PDF\Crystal Jacobs CV8_small.pdf" class="btn d-cv">Download CV</a>
+                <a href="mailto:conquela888@hotmail.com" class="btn">Hire Me Now!</a>
+            </div>        
+    
+            <div class="social-media-banner">
+                <a href="#"><i class="fa-brands fa-square-github"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+<!--SPECIALITY SECTION-->
+
+<section class="special" id="special">
+    <div class="main-text">
+        <span>WHAT I DO...</span>
+        <h1 class="h1-skills">MY <span>SPECIALITY</span></h1>
+    </div>
+
+    <div class="special-container">    
+        <div class="special-box">
+            <i class='bx bxs-coin-stack'></i>
+            <h3>Senior Business Analyst</h3>
+            <p> I specialize in bridging the gap between business objectives and technology solutions. By analyzing business 
+                processes and implementing strategic initiatives that enhance efficiency and drive growth.</p>
+                <!-- <div class="btn-box">
+                    <a href="#" class="btn">Learn More...</a>
+                </div>  --> 
+        </div>
+    
+        <div class="special-box">
+                <i class='bx bxs-label'></i>
+                <h3>Power Platforms Engineer</h3>
+                <p>I specialize in harnessing the capabilities of Microsoft Power Platform to design and implement innovative
+                     solutions that streamline business processes and enhance productivity.</p>
+                  <!-- <div class="btn-box">
+                        <a href="#" class="btn">Learn More...</a>
+                    </div>  --> 
+            </div>
+
+            <div class="special-box">
+                <i class='bx bx-pyramid'></i>
+                <h3>A.I. Solutions Architect</h3>
+                <p>I specialize in designing and deploying advanced solutions that drive innovation and efficiency across 
+                    various industries to understanding business challenges and leveraging AI technologies.</p>
+                    <!-- <div class="btn-box">
+                        <a href="#" class="btn">Learn More...</a>
+                    </div>  --> 
+            </div>
+
+            <div class="special-box">
+                <i class='bx bxs-analyse'></i>
+                <h3>Data Analysis</h3>
+                <p>I specialize in transforming complex data into actionable insights by leveraging advanced statistical techniques and cutting-edge tools to 
+                    analyze large datasets, uncover patterns, and drive strategic decision-making</p>
+                   <!-- <div class="btn-box">
+                        <a href="#" class="btn">Learn More...</a>
+                    </div>  --> 
+            </div>
+    </div>
+</section>
+
+<!-- ***** ABOUT ME ********-->
+
+<section class="About" id="about">
+    <div class="my-tech"> 
+        <img src="Images/Crystal Image 3.png" alt="About Me">
+        <div class="info-about1">
+                <span>15+</span>
+                <p>Years of Experience</p>
+        </div>
+        <div class="info-about2">
+            <span>150+</span>
+            <p>Projects Completed</p>
+        </div>
+        <div class="info-about3">
+            <span>3+</span>
+            <p>Microsoft Certifications</p>
+        </div>
+    </div>
+    <div class="about-content">
+        <h2 class="heading-About">LET ME INTRODUCE MYSELF</h2>
+        <h1 class="heading-About">CRYSTAL JACOBS</h1>
+        <h3 class="heading-engin">ANALYST & ENGINEER</h3>
+        <p>As a Microsoft Certified Associate and  Power Platforms Engineer, Senior Business / Data Analyst, with extensive experience in driving efficiency 
+           through process optimization, data analytics, and automated solutions. With a proven track record working with International companies on high-value 
+           projects across various sectors including Information Technology, Manufacturing, and Agriculture. With expertise in designing 
+           and implementing robust solutions, driving efficiency and productivityy.</p>
+    </div>
+    <div class="btn-container">
+        <a href="#" class="btn-about">Read More...</a>
+    </div>
+</section>
+
+<!-- ********************************************************* MY TECHNOLOGIES ***************************************************************-->
+
+<section class="technologies">
+    <div class="technologies-container">
+                <img src="Images/icons8-azure-240.png" alt="Azure" title="Azure">
+                <img src="Images/icons8-java-250.png" alt="Java" title="Java">
+                <img src="Images/icons8-microsoft-sql-server-240.png" alt="SQL" title="SQL">
+                <img src="Images/icons8-microsoft-power-automate-2020-240 (2).png" alt="Power Automate" title="Power Automate">
+                <img src="Images/icons8-microsoft-power-apps-2020-240 (1).png" alt="Power Apps" title="Power Apps">
+                <img src="Images/icons8-power-bi-2021-240 (2).png" alt="Power BI" title="Power BI">
+                <img src="Images/icons8-visual-studio-250.png" alt="Visual Studio" title="Visual Studio">
+                <img src="Images/icons8-python-240 (3).png" alt="Python" title="Python">
+                <img src="Images/icons8-excel-250.png" alt="Excel" title="Excel"> 
+    </div>
+</section>
+
+<!-- ******************************************************** MY SKILLS **********************************************************************-->
+
+<section class="skills" id="experience">
+    <!--SKILLS HEADER TEXT-->
+    <div class="main-text">
+        <span>Technical and Professional Skills</span>
+        <h1 class="h1-prof_skills">Proficiency Skill Level</h1>
+    </div>
+
+    <div class="skill-main"> <!--MY SKILLLS BAR CHART-->
+        <div class="skill-left">
+            <H2><span>Technical</span> Skills</H2>
+
+            <!--BUSINESS AND DATA ANALYST BAR-->
+            <div class="skill-bar">
+                <div class="info">
+                    <h3 class="h3-skills">Business & Data Analyst</h3>
+                    <p>90%</p>
+                </div>
+                
+                <div class="bar">
+                    <span class="bar_data"></span>
+                </div>
+            </div>
+
+            <!--GENERAL AND WEB DEVELOPMENT-->
+            <div class="skill-bar">
+                <div class="info">
+                    <h3 class="h3-skills">General & Web Development</h3>
+                    <p>60%</p>
+                </div>
+                
+                <div class="bar">
+                    <span class="bar_dev"></span>
+                </div>
+            </div>
+
+            <!--POWER PLATFORMS ENGINEER-->
+
+            <div class="skill-bar">
+                <div class="info">
+                    <h3 class="h3-skills">Power Platforms Engineer</h3>
+                    <p>89%</p>
+                </div>
+                
+                <div class="bar">
+                    <span class="bar_engineer"></span>
+                </div>
+            </div>
+
+            <!--BUSINESS CENTRAL 365-->
+            <div class="skill-bar">
+                <div class="info">
+                    <h3 class="h3-skills">Business Centeral 365</h3>
+                    <p>80%</p>
+                </div>
+                
+                <div class="bar">
+                    <span class="bar_central"></span>
+                </div>
+            </div>
+
+            <!--SOLUTIONS ARCHITECT-->
+            <div class="skill-bar">
+                <div class="info">
+                    <h3 class="h3-skills">Solutions Architect</h3>
+                    <p>83%</p>
+                </div>
+                
+                <div class="bar">
+                    <span class="bar_architect"></span>
+                </div>
+            </div>
+         </div>   
+
+        <div class="Skill-right">
+            <H2><span>Professional </span>Skills</H2>
+            <div class="professional">
+                <div class="box">
+                    <div class="circle" data-dots="60" data-percent="90"></div>
+                    <div class="text">
+                        <big>90%</big>
+                        <small>Agile Scurm Skills</small>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="circle" data-dots="60" data-percent="90"></div>
+                    <div class="text">
+                        <big>90%</big>
+                        <small>Communication Skills</small>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="circle" data-dots="60" data-percent="80"></div>
+                    <div class="text">
+                        <big>80%</big>
+                        <small>Leadership Skills</small>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="circle" data-dots="60" data-percent="85"></div>
+                    <div class="text">
+                        <big>85%</big>
+                        <small>Analytical Skills</small>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</section>
+
+<!--**************************************************** EDUCATION SECTION DESIGN *************************************************************-->
+
+<section class="education" id="education">
+    <div class="main-text">
+        <h3>THIS IS MY JOURNEY</h3>
+        <h2 class="heading_edu">My <span>Professional</span> Journey</h2>
+    </div>
+
+    <div class="education-row">
+        <div class="education-column">
+            <h3 class="title">Education</h3>
+
+            <div class="education-box">
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="fa-regular fa-calendar-check"></i> Obtained 2024</div>
+                        <h3>PL-200 Power Platforms Associate</h3>
+                        <h2>Microsoft Pearson Vue</h2>
+                        <p>As a certified Power Platform Engineer, I specialize in harnessing the capabilities of Power Platform to create innovative business solutions. My expertise in Power Apps, Power Automate, Power BI, and Power Virtual Agents enables me to streamline processes, enhance productivity, and drive data-driven decision-making. I am dedicated to delivering impactful solutions that address complex business challenges and foster operational efficiency.</p>
+                    </div>
+                </div>
+          
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="fa-regular fa-calendar-check"></i> Obtained 2023</div>
+                        <h3>MB-800 Business Central Associate</h3>
+                        <h2>Microsoft Pearson Vue</h2>
+                        <p>As a certified MB-800 Business Central Specialist with a robust background in AL development, I bring a wealth of expertise in deploying and customizing Microsoft Dynamics 365 Business Central to meet diverse business needs. My skill set is centered on developing scalable, efficient solutions that streamline operations, improve financial management, and drive business growth.</p>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="fa-regular fa-calendar-check"></i> Feb 2019 - Dec 2021</div>
+                        <h3>B.s.C in Information Technology (Software Engineering)</h3>
+                        <h2>Richfield Institution of Technology & Business</h2>
+                        <p>With a comprehensive education and hands-on experience in software engineering, I specialize in designing and implementing efficient, scalable software systems. My strong background in mathematics and artificial intelligence equips me with the skills necessary to tackle complex problems, optimize algorithms, and contribute to innovative AI projects.</p>
+                    </div>
+                </div>
+            
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="fa-regular fa-calendar-check"></i> 2018 - 2019</div>
+                        <h3>Advanced Certification - Agricultural Management</h3>
+                        <h2>NOSA Agriculture Institution</h2>
+                        <p>As a dedicated professional with an Advanced Certification in Agricultural Management, I specilized in Business and Livestock Management, I bring a comprehensive skill set aimed at optimizing agricultural operations and enhancing livestock productivity. My expertise spans across strategic business planning, efficient livestock management, and sustainable agricultural practices.</p>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="fa-regular fa-calendar-check"></i> 2010 - 2011</div>
+                        <h3>Diploma in Agricultural Management</h3>
+                        <h2>Stonebridge Collage</h2>
+                        <p>As a dedicated professional with a Diploma in Agricultural Management, I specilized in Stud Farming and Feedlotting, I bring extensive expertise in breeding high-quality livestock and optimizing feedlot operations. My focus on sustainable and efficient farming practices ensures the highest standards of animal welfare and productivity.</p>
+                    </div>
+                </div>
+         
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="fa-regular fa-calendar-check"></i> 2008 - 2010</div>
+                        <h3>Diploma in Stable Management</h3>
+                        <h2>Stonebridge Collage</h2>
+                        <p>As a dedicated equestrian professional with a Diploma in Stable Management, I specilized in Equine Health and Horse Training, I bring a wealth of knowledge and expertise to the care, management, and training of horses. My commitment to maintaining the highest standards of equine health and developing effective training programs ensures the well-being and performance of each horse under my care.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="education-column">
+            <h3 class="title">Experience</h3>
+
+            <div class="education-box">
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="fa-regular fa-calendar-check"></i> January 2024 - Present</div>
+                        <h3>Senior Power Platforms Engineer</h3>
+                        <h2>Bestbar / Bitberry, Australia</h2>
+                        <p>Accomplished as a Engineer and Solutions Architect, I leverage my expertise developing solutions for the Manufacturing and I.T industry. Working closely with stakeholders, I analyze business requirements to design and implement solutions that maximize efficiency. My focus on process optimization, data visualization, and automation empowers teams to streamline operations and achieve significant business outcomes.</p>
+                     <br>
+                     <ul>
+                            <li><i>Please view my CV for more detail on responsibilites and experience...</i></li>
+                     </ul>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="fa-regular fa-calendar-check"></i> June 2023 - January 2024</div>
+                        <h3>Senior Business Analyst</h3>
+                        <h2>Kaplan UK</h2>
+                        <p>Accomplished in conducting thorough requirements gathering and analysis for high-value projects such as SQE, with expertise in solution design, product ownership, and leveraging Business Central integrated with Azure DevOps. Proficient in fostering stakeholder engagement and applying Agile Scrum methodology. Experienced in collaborative project management, driving process improvement, and leading workshops to enhance project outcomes. Ensures rigorous quality assurance and supports seamless testing of development changes, facilitating effective communication between developers and stakeholders.</p>
+                        <br>
+                      <ul>
+                            <li><i>Please view my CV for more detail on responsibilites and experience...</i></li>
+                     </ul>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="fa-regular fa-calendar-check"></i> March 2022 - May 2023</div>
+                        <h3>Senior Business System Analyst</h3>
+                        <h2>JLM Services (Pty) Ltd, Paarl</h2>
+                        <p>Accomplished in setting up and customizing Microsoft products, notably Business Central, and developing bespoke systems across various languages and databases. Proficient in automation, Azure implementation, and management, driving successful implementations for enhanced business efficiency. Experienced across all phases of the Software Development Life Cycle (SDLC), with strong skills in documentation and diagramming.</p>
+                        <br>
+                        <ul>
+                              <li><i>Please view my CV for more detail on responsibilites and experience...</i></li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="fa-regular fa-calendar-check"></i> December 2014 - March 2023</div>
+                        <h3>Chief Executive Officer</h3>
+                        <h2>TauMilio Transport Services, Nationwide</h2>
+                        <p>Accomplished Chief Executive Officer with a robust background in business analysis, fleet management, and strategic business and contracts management. Proven track record in implementing rigorous safety standards and achieving ISO 9001 certification for warehouse operations. Skilled in effective staff management, comprehensive risk management, and optimizing warehouse and distribution operations.</p>
+                        <br>
+                        <ul>
+                              <li><i>Please view my CV for more detail on responsibilites and experience...</i></li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class="fa-regular fa-calendar-check"></i> January 2008 - October 2014</div>
+                        <h3>Feed and Farm Manager</h3>
+                        <h2>Conquela Alstar, Northern and Western Cape</h2>
+                        <p>With more then 15 years experience in Agricultural, I have developed a strong foundation in managing stud farms and feedlots. My background equips me with the skills to implement advanced breeding techniques, manage livestock nutrition, and enhance overall farm efficiency and profitability.</p>
+                        <br>
+                        <ul>
+                              <li><i>Please view my CV for more detail on responsibilites and experience...</i></li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                
+<!-- ******************************************** PORTFOLIO DESIGN SECTION ********************************************************************-->        
+
+<section class="portfolio" id="portfolio">
+    <div class="main-texts">
+        <span>This is what I do...</span>
+        <h1 class="h1-prof_skills">Professional Project Portfolio</h1>
+    </div>
+
+    <div class="container">
+        <div class="filter-buttons">
+            <button class="btn active" data-filter="all">All</button>
+            <button class="btn" data-filter=".PowerBI">Data Analysis</button>
+            <button class="btn" data-filter=".PowerP">Power Platforms</button>
+            <button class="btn" data-filter=".WebApp">Web / Development</button>
+            <button class="btn" data-filter=".AISol">A.I. Solutions</button>
+    </div>
+
+        <!-- PORTFOLIO ONE -->
+
+        <div class="portfolio-gallery">
+            <div class="port-box mix PowerBI">
+                <div class="port-image">
+                    <img src="Images/Image (11).jpg" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Data Analysis</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugit totam quas maiores sint, earum sit tempora optio dignissimos similique voluptatibus, 
+                        magnam nobis nam molestias velit dolores atque odio nesciunt.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+                    <!-- PORTFOLIO TWO -->
+
+            <div class="port-box mix PowerBI">
+                <div class="port-image">
+                    <img src="Images/Image (11).jpg" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Data Analysis</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugit totam quas maiores sint, earum sit tempora optio dignissimos similique voluptatibus, 
+                        magnam nobis nam molestias velit dolores atque odio nesciunt.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+                    <!-- PORTFOLIO THREE -->
+
+            <div class="port-box mix PowerBI">
+                <div class="port-image">
+                    <img src="Images/Image (11).jpg" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Data Analysis</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugit totam quas maiores sint, earum sit tempora optio dignissimos similique voluptatibus, 
+                        magnam nobis nam molestias velit dolores atque odio nesciunt.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+                    <!-- PORTFOLIO FOUR -->
+
+            <div class="port-box mix PowerP">
+                <div class="port-image">
+                    <img src="Images/Image (5).jpg" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Power Platforms</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugit totam quas maiores sint, earum sit tempora optio dignissimos similique voluptatibus, 
+                        magnam nobis nam molestias velit dolores atque odio nesciunt.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+                    <!-- PORTFOLIO FIVE -->
+
+            <div class="port-box mix PowerP">
+                <div class="port-image">
+                    <img src="Images/Image (5).jpg" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Power Platforms</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugit totam quas maiores sint, earum sit tempora optio dignissimos similique voluptatibus, 
+                        magnam nobis nam molestias velit dolores atque odio nesciunt.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+                    <!-- PORTFOLIO SIX -->
+
+            <div class="port-box mix PowerP">
+                <div class="port-image">
+                    <img src="Images/Image (5).jpg" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Power Platforms</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugit totam quas maiores sint, earum sit tempora optio dignissimos similique voluptatibus, 
+                        magnam nobis nam molestias velit dolores atque odio nesciunt.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+                    <!-- PORTFOLIO SEVEN -->
+
+            <div class="port-box mix WebApp">
+                <div class="port-image">
+                    <img src="Images/Image (10).jpg" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Web Applications</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugit totam quas maiores sint, earum sit tempora optio dignissimos similique voluptatibus, 
+                        magnam nobis nam molestias velit dolores atque odio nesciunt.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+                    <!-- PORTFOLIO EIGHT -->
+            <div class="port-box mix WebApp">
+                <div class="port-image">
+                    <img src="Images/Image (10).jpg" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Web Applications</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugit totam quas maiores sint, earum sit tempora optio dignissimos similique voluptatibus, 
+                        magnam nobis nam molestias velit dolores atque odio nesciunt.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- PORTFOLIO NINE -->
+
+        <div class="port-box mix WebApp">
+            <div class="port-image">
+                <img src="Images/Image (10).jpg" alt="">
+            </div>
+            <div class="port-content">
+                <h3>Web Applications</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugit totam quas maiores sint, earum sit tempora optio dignissimos similique voluptatibus, 
+                    magnam nobis nam molestias velit dolores atque odio nesciunt.
+                </p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>            
+
+        <!-- PORTFOLIO TEN -->
+
+        <div class="port-box mix AISol">
+            <div class="port-image">
+                <img src="Images/Image (9).jpg" alt="">
+            </div>
+            <div class="port-content">
+                <h3>A.I. Solutions</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugit totam quas maiores sint, earum sit tempora optio dignissimos similique voluptatibus, 
+                    magnam nobis nam molestias velit dolores atque odio nesciunt.
+                </p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>      
+        
+               <!-- PORTFOLIO ELEVEN -->
+
+               <div class="port-box mix AISol">
+                <div class="port-image">
+                    <img src="Images/Image (9).jpg" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>A.I. Solutions</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugit totam quas maiores sint, earum sit tempora optio dignissimos similique voluptatibus, 
+                        magnam nobis nam molestias velit dolores atque odio nesciunt.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>  
+
+                   <!-- PORTFOLIO TWELVE -->
+
+        <div class="port-box mix AISol">
+            <div class="port-image">
+                <img src="Images/Image (9).jpg" alt="">
+            </div>
+            <div class="port-content">
+                <h3>A.I. Solutions</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugit totam quas maiores sint, earum sit tempora optio dignissimos similique voluptatibus, 
+                    magnam nobis nam molestias velit dolores atque odio nesciunt.
+                </p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>  
+        </div>
+    </div>
+</section>
+
+<!-- ******************************************************* CHARITY SECTION ******************************************************************-->
+
+<section class="charity">
+    <div class="charity-container">
+        <div class="main-text">
+            <h3>PLEASE SUPPORT AND DONATE</h3>
+            <h2 class="heading-charity">Supporting<span> Good </span>Causes</h2>
+        </div>
+        <div class="testimonial-wrapper">
+            <div class="testimonial-box mySwiper">
+                <div class="testimonial-content swiper-wrapper">
+                    <div class="testimonial-slide swiper-slide">
+                        <div class="image-wrapper">
+                            <img src="Images/Butterfly Logo.png" alt="Omani Quantium Practitioner" title="Cheryl Jacobs" style="width: 140px; height: 140px;">
+                        </div>
+                        <h3>Omani Quantium Wellness</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit animi reiciendis repellat, 
+                            non recusandae ab magni ipsum minima, perspiciatis voluptates repudiandae ex quam nemo blanditiis. Nihil illum ipsam dolorum quis.</p>
+                        <div class="charity-icons">
+                            <ul class="social-icon">
+                                <li><a href="#"><i class='bx bxl-facebook-circle fa-3x'></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram fa-3x"></i></a></li>
+                                <li><a href="#"><i class='bx bxs-envelope fa-3x'></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide swiper-slide">
+                        <div class="image-wrapper">
+                            <img src="Images/Caryn Schofield.jpg" alt="Caryn Schofield - BackUp Buddy" title="Caryn Schofield">
+                        </div>
+                        <h3>Caryn Schofield - BackUp Buddy</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit animi reiciendis repellat, 
+                            non recusandae ab magni ipsum minima, perspiciatis voluptates repudiandae ex quam nemo blanditiis. Nihil illum ipsam dolorum quis.</p>
+                        <div class="charity-icons">
+                            <ul class="social-icon">
+                                <li><a href="#"><i class='bx bxl-facebook-circle fa-3x'></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram fa-3x"></i></a></li>
+                                <li><a href="#"><i class='bx bxs-envelope fa-3x'></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide swiper-slide">
+                        <div class="image-wrapper">
+                            <img src="Images/World Wildlife fund.png" alt="World Wildlife fund" title="World Wildlife Fund">
+                        </div>
+                        <h3>World Wildlife Fund</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit animi reiciendis repellat, 
+                            non recusandae ab magni ipsum minima, perspiciatis voluptates repudiandae ex quam nemo blanditiis. Nihil illum ipsam dolorum quis.</p>
+                        <div class="charity-icons">
+                            <ul class="social-icon">
+                                <li><a href="#"><i class='bx bxl-facebook-circle fa-3x'></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram fa-3x"></i></a></li>
+                                <li><a href="#"><i class='bx bxs-envelope fa-3x'></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- ******************************************************************** FOOTER SECTIONS *************************************************************************-->
+
+<footer class="footer">
+
+    <div class="footer-icons">
+        <ul class="footer-IcontsBottom">
+            <li><a href="#"><i class="fa-brands fa-github fa-2xl"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="footer-text">
+        <p>Copyright &copy; 2024 by Crystal Jacobs | SmartFlow888 Solutions | All Rights Reserverd</p>
+    </div>
+
+    <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-circle'></i></a>
+    </div>
+</footer>
+
+<!--SWIPER JS-->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="JScript/mixitup.min.js"></script>
+    <script src="JScript/main.js"></script>
+</body>
+</html>
