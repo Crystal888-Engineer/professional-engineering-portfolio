@@ -230,7 +230,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 600px;
+    max-width: 650px;
     margin-top: 5rem;
 }
 
@@ -284,7 +284,7 @@ section {
 
 .home-content p {
     color: #bdbdbd;
-    line-height: 1.6rem;
+    line-height: 1.8rem;
     font-size: 1.6rem;
     margin-top: 1rem;
     margin-right: 1rem;
