@@ -5,10 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+               
+        {
             "type": "msedge",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\conqu\\Desktop\\EMC2 = Aurum888\\Engineering & Development Career\\8 Portfolio Content\\Crystal Portfolio Website\\index.html"
+            "url": "http://localhost:5500/index.html"
         }
     ]
 }
