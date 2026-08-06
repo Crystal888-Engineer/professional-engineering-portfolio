@@ -19,6 +19,8 @@
     --snd-bf-color: #C2A531;
     --text-color: #ffffff;
     --main-color: #754ef9;
+    --small-font: 0.875rem;  /* ~14px */
+    --medium-font: 1.5rem;     /* 16px */
     --big-font: 2.5rem;
     --normal-font: 2rem;
 }
@@ -129,7 +131,7 @@ body {
 }
 
 .navbar .logo {
-    font-size: var(--big-font);
+    font-size: var(--medium-font);
     color: var(--text-color);
     font-weight: bold;
     cursor: default;
@@ -201,7 +203,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    padding: 8rem 2rem 0 2rem;
+    padding: 8rem 2rem 3rem 2rem;
     position: relative; /* Add this line to ensure the blob stays within the section */
 }
 
@@ -243,6 +245,19 @@ section {
     color: var(--snd-bf-color);
     font-size: 4.3rem;
     letter-spacing: 0.1rem;
+}
+
+.intro-text {
+    font-size: 1.5rem;            /* bigger font */
+    line-height: 2.3rem !important;          /* increased row spacing for readability */
+    color: #e0e0e0;               /* softer white */
+    letter-spacing: 0.1rem;      /* slight letter spacing */
+    margin-bottom: 2rem;
+}
+
+.intro-text strong {
+    color: var(--snd-bf-color);   /* gold highlight for key terms */
+    font-weight: 700;
 }
 
 .change-text {
@@ -407,6 +422,86 @@ a.btn:nth-child(2)::before {
     z-index: 0; 
 }
 */
+
+/* **************************************************** DIGITAL BADGES ********************************************************** */
+
+.badges {
+    padding: 40px 0;
+    text-align: center;
+    background-color: var(--bg-color-black);
+}
+
+/* Add more spacing between badges */
+.badges-container {
+    display: flex;
+    justify-content: center;
+    column-gap: 80px; /* horizontal spacing */
+    row-gap: 60px;    /* vertical spacing */
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.badge-box {
+    flex: 1 1 250px;
+    min-width: 250px;   /* ensures it won’t shrink below this width */
+    max-width: 280px;
+    background: transparent;   /* remove white background */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25); /* darker, subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+.badge-box img {
+    width: 70%;             /* Reduce from 100% to 70% (try 60–80% if you want smaller/larger) */
+    height: auto;
+    margin: 0 auto;         /* Center the image within the box */
+    display: block;
+    transition: transform 0.3s ease;
+    object-fit: contain;    /* Ensures badge proportions stay correct */
+}
+
+.badge-box img:hover {
+    transform: scale(1.1);
+}
+
+.badge-box h3 {
+    font-size: var(--medium-font, 1rem);
+    margin: 15px 0 5px;
+    font-weight: 600;
+}
+
+.badge-box p {
+    font-size: 1.3rem;
+    color: #C2A531;
+    margin-bottom: 8px;
+}
+
+.main-text {
+    margin-bottom: 40px; /* space between heading and badges */
+}
+
+.h1-skills {
+    margin-top: 20px;
+    margin-bottom: 20px; /* space under the H1 */
+    color: var(--snd-bf-color);
+}
+
+.verify-link {
+    display: inline-block;
+    margin-top: 5px;
+    color: #754ef9;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.verify-link:hover {
+    color: var(--text-color);
+    transform: scale(1.1); /* grows 10% on hover */
+}
+
 
 /* **************************************************** SPECIALITY SECTION ****************************************************** */
 
