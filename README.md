@@ -33,10 +33,10 @@ This project is being developed incrementally using Git, GitHub, and modern soft
 
 ## Phase 1 – Foundation
 
-- [ ] Import existing portfolio
-- [ ] Configure GitHub repository
-- [ ] Publish with GitHub Pages
-- [ ] Establish project structure
+- [X] Import existing portfolio
+- [X] Configure GitHub repository
+- [X] Publish with GitHub Pages
+- [X] Establish project structure
 
 ## Phase 2 – Modernization
 
