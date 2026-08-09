@@ -145,7 +145,7 @@ professional-engineering-portfolio/
 ---
 ## Copyright
 
-Copyright © 2026 Solar. All rights reserved.
+Copyright © 2026 Crystal Jacobs. All rights reserved.
 
 This repository is made publicly available for portfolio, educational, and evaluation purposes only.
 
