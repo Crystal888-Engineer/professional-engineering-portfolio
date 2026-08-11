@@ -26,6 +26,10 @@ section[id]{scroll-margin-top:78px;}
   nav a{font-size:12.5px !important;}
   nav > div{gap:4px !important;}
 }
+@media (max-width:760px){
+  nav > div[data-desktop-nav]{display:none !important;}
+  nav button[data-mobile-nav-toggle]{display:flex !important;}
+}
 @media (max-width:1100px){
   [data-deco="1"]{opacity:.06 !important;}
 }
@@ -36,6 +40,16 @@ section[id]{scroll-margin-top:78px;}
   #home{grid-template-columns:1fr !important;padding:64px 24px 80px !important;}
   #home > div:first-child{max-width:420px;margin:0 auto 40px;}
   #home > div:last-child{max-width:none !important;}
+  [data-chip="systems-focus"]{right:4px !important;top:-10px !important;}
+  [data-chip="engineering-focus"]{left:4px !important;bottom:-10px !important;}
+  [data-chip="years-badge"]{left:4px !important;}
+  [data-frame="profile-lines"]{top:-20px !important;left:-20px !important;width:calc(100% + 40px) !important;height:calc(100% + 40px) !important;}
+}
+@media (max-width:640px){
+  [data-util-bar="1"]{flex-wrap:wrap;row-gap:8px;padding:10px 20px;}
+}
+@media (max-width:480px){
+  [data-util-loc="1"]{display:none;}
 }
 @media (max-width:520px){
   #home h1{font-size:36px !important;}
@@ -44,27 +58,30 @@ section[id]{scroll-margin-top:78px;}
   #about > div{grid-template-columns:1fr !important;gap:36px !important;}
 }
 @media (max-width:900px){
-  #future div[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr !important;}
-  #future div[style*="grid-template-columns:1fr 1fr 1fr"] span[style*="right:-30px"]{display:none;}
-  #future div[style*="grid-template-columns:0.9fr 1.1fr 0.8fr"]{grid-template-columns:1fr !important;}
+  [data-grid="future-stages"]{grid-template-columns:1fr !important;}
+  [data-grid="future-stages"] span[style*="right:-30px"]{display:none;}
+  [data-grid="future-summary"]{grid-template-columns:1fr !important;}
   #future svg[height="30"]{display:none;}
 }
 @media (max-width:760px){
-  #future div[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr !important;gap:32px !important;}
-  #future div[style*="grid-template-columns:1fr 1fr 1fr"] svg{display:none;}
-  #future div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
+  [data-grid="future-stages"]{grid-template-columns:1fr !important;gap:32px !important;}
+  [data-grid="future-tech"]{grid-template-columns:1fr !important;}
 }
 @media (max-width:560px){
   footer div[style*="text-align:right"]{text-align:left !important;}
-  #about div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
-  #credentials div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
+}
+@media (max-width:760px){
+  [data-grid="about-panels"]{grid-template-columns:1fr !important;}
+  [data-grid="cred-capabilities"]{grid-template-columns:1fr !important;}
+  [data-grid="education"]{grid-template-columns:1fr !important;}
 }
 @media (max-width:1024px){
   [data-grid="cred-badges"]{grid-template-columns:repeat(2,1fr) !important;}
   [data-grid="work-cards"]{grid-template-columns:repeat(2,1fr) !important;}
 }
 @media (max-width:760px){
-  [data-grid="cred-badges"]{grid-template-columns:1fr !important;}
+  [data-grid="cred-badges"]{grid-template-columns:1fr !important;align-items:start !important;}
+  [data-card="credential"]{height:auto !important;}
   [data-grid="pub-cards"]{grid-template-columns:1fr !important;}
   [data-grid="work-cards"]{grid-template-columns:1fr !important;}
   [data-grid="work-header"]{grid-template-columns:1fr !important;}
@@ -81,7 +98,7 @@ section[id]{scroll-margin-top:78px;}
   <div style="position:fixed;bottom:-25%;right:-10%;width:60%;height:60%;background:radial-gradient(circle,#241035aa,transparent 65%);pointer-events:none;z-index:0;" data-deco="1" aria-hidden="true"></div>
   <img src="assets/images/sacred-geometry.png" alt="" style="position:absolute;top:70px;right:-60px;width:560px;height:560px;object-fit:contain;opacity:.22;mix-blend-mode:screen;pointer-events:none;z-index:0;" data-deco="1" aria-hidden="true"/>
 
-  <div style="position:relative;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:10px 48px;background:#0B0A11;border-bottom:1px solid #ffffff0f;font-size:12.5px;color:#9490A6;letter-spacing:.02em;">
+  <div data-util-bar="1" style="position:relative;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:10px 48px;background:#0B0A11;border-bottom:1px solid #ffffff0f;font-size:12.5px;color:#9490A6;letter-spacing:.02em;">
     <div style="display:flex;gap:20px;align-items:center;">
       <a href="https://github.com/Crystal888-Engineer" style="display:flex;align-items:center;gap:8px;color:#D7D3E3;transition:color .15s ease;" style-hover="color:#C9A227;">
         <img src="assets/images/icon-github.png" alt="GitHub" style="width:24px;height:24px;border-radius:50%;"/>
@@ -91,7 +108,7 @@ section[id]{scroll-margin-top:78px;}
         <img src="assets/images/icon-linkedin.png" alt="LinkedIn" style="width:24px;height:24px;border-radius:50%;"/>
         LinkedIn
       </a>
-      <a href="https://www.credly.com/badges/3848c5d5-0bb0-4324-8ac2-0b7d65bf79f7/public_url" style="display:flex;align-items:center;gap:8px;color:#D7D3E3;transition:color .15s ease;" style-hover="color:#C9A227;">
+      <a href="#" style="display:flex;align-items:center;gap:8px;color:#D7D3E3;transition:color .15s ease;" style-hover="color:#C9A227;">
         <span style="width:24px;height:24px;border-radius:50%;background:#C9A227;display:flex;align-items:center;justify-content:center;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0B0A11" stroke-width="2"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.5 7 21l5-2 5 2-1.5-7.5"/></svg>
         </span>
@@ -99,7 +116,7 @@ section[id]{scroll-margin-top:78px;}
       </a>
     </div>
     <div style="display:flex;gap:20px;align-items:center;">
-      <span style="display:flex;align-items:center;gap:7px;">
+      <span data-util-loc="1" style="display:flex;align-items:center;gap:7px;">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.8"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.2"/></svg>
         Cape Town, South Africa
       </span>
@@ -120,9 +137,19 @@ section[id]{scroll-margin-top:78px;}
       </svg>
       <span style="display:flex;gap:7px;align-items:baseline;"><span style="font-family:'Fredoka',sans-serif;font-weight:500;font-size:19px;letter-spacing:.01em;color:#F4F2F8;">Crystal</span><span style="font-family:'Fredoka',sans-serif;font-weight:500;font-size:19px;letter-spacing:.01em;color:#C9A227;">Jacobs</span></span>
     </a>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;overflow-x:auto;">
+    <div data-desktop-nav="1" style="display:flex;gap:8px;flex-wrap:wrap;overflow-x:auto;">
       <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="7">
         <a href="{{ item.href }}" onClick="{{ item.onClick }}" style="{{ item.style }}" style-hover="color:#F4F2F8;">{{ item.label }}</a>
+      </sc-for>
+    </div>
+    <button aria-label="Toggle navigation menu" aria-expanded="{{ mobileNavOpen }}" onClick="{{ toggleMobileNav }}" data-mobile-nav-toggle style="display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;border-radius:10px;background:#14111f;border:1px solid #ffffff1a;cursor:pointer;flex:none;">
+      <span style="width:20px;height:2px;background:#F4F2F8;border-radius:2px;"></span>
+      <span style="width:20px;height:2px;background:#F4F2F8;border-radius:2px;"></span>
+      <span style="width:20px;height:2px;background:#F4F2F8;border-radius:2px;"></span>
+    </button>
+    <div data-mobile-nav-menu style="{{ mobileMenuStyle }}">
+      <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="9">
+        <a href="{{ item.href }}" onClick="{{ item.onClickMobile }}" style="{{ item.mobileStyle }}" style-hover="color:#F4F2F8;background:#1c1830;">{{ item.label }}</a>
       </sc-for>
     </div>
   </nav>
@@ -132,7 +159,7 @@ section[id]{scroll-margin-top:78px;}
       <text x="170" y="45" font-size="26" font-weight="700" font-family="'Sora',sans-serif" text-anchor="middle" fill="#EDEAE2">&#916;S = P + I &#8722; R &#8722; ET</text>
     </svg>
     <div style="position:relative;">
-      <svg style="position:absolute;top:-60px;left:-60px;width:calc(100% + 120px);height:calc(100% + 120px);z-index:0;overflow:visible;" viewBox="0 0 400 640" fill="none">
+      <svg data-frame="profile-lines" style="position:absolute;top:-60px;left:-60px;width:calc(100% + 120px);height:calc(100% + 120px);z-index:0;overflow:visible;" viewBox="0 0 400 640" fill="none">
         <path d="M40 40 L40 300 L-20 300" stroke="#7C5CFC44" stroke-width="1.4"/>
         <path d="M360 60 L300 60 L300 -10" stroke="#7C5CFC44" stroke-width="1.4"/>
         <path d="M370 400 L370 560 L440 560" stroke="#C9A22755" stroke-width="1.4"/>
@@ -148,15 +175,15 @@ section[id]{scroll-margin-top:78px;}
         <img src="assets/images/profile.png" alt="Crystal Jacobs portrait — placeholder, to be replaced" style="display:block;width:100%;height:520px;object-fit:cover;object-position:top center;"/>
         <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,#0B0A11cc);"></div>
       </div>
-      <div style="position:absolute;top:-14px;right:-22px;z-index:3;background:#151220;border:1px solid #C9A22755;border-radius:14px;padding:12px 16px;box-shadow:0 20px 40px -20px #000;animation:float 6s ease-in-out infinite;">
+      <div data-chip="systems-focus" style="position:absolute;top:-14px;right:-22px;z-index:3;background:#151220;border:1px solid #C9A22755;border-radius:14px;padding:12px 16px;box-shadow:0 20px 40px -20px #000;animation:float 6s ease-in-out infinite;">
         <div style="font-family:'Sora',sans-serif;font-size:11px;letter-spacing:.06em;color:#C9A227;font-weight:700;">SYSTEMS FOCUS</div>
         <div style="font-size:12.5px;color:#D7D3E3;margin-top:2px;">AI · IoT · Data Engineering</div>
       </div>
-      <div style="position:absolute;bottom:-16px;left:-22px;z-index:3;background:#151220;border:1px solid #7C5CFC55;border-radius:14px;padding:12px 16px;box-shadow:0 20px 40px -20px #000;animation:float 7s ease-in-out infinite 1s;">
+      <div data-chip="engineering-focus" style="position:absolute;bottom:-16px;left:-22px;z-index:3;background:#151220;border:1px solid #7C5CFC55;border-radius:14px;padding:12px 16px;box-shadow:0 20px 40px -20px #000;animation:float 7s ease-in-out infinite 1s;">
         <div style="font-family:'Sora',sans-serif;font-size:11px;letter-spacing:.06em;color:#C9A227;font-weight:700;">ENGINEERING FOCUS</div>
         <div style="font-size:12.5px;color:#D7D3E3;margin-top:2px;">AI · IoT · Green Energy</div>
       </div>
-      <div style="position:absolute;top:50%;left:-30px;z-index:3;background:#151220;border:1px solid #ffffff22;border-radius:100px;padding:6px 12px;font-size:11px;color:#9490A6;font-family:'Sora',sans-serif;letter-spacing:.04em;animation:float 8s ease-in-out infinite .5s;">15+ YRS</div>
+      <div data-chip="years-badge" style="position:absolute;top:50%;left:-30px;z-index:3;background:#151220;border:1px solid #ffffff22;border-radius:100px;padding:6px 12px;font-size:11px;color:#9490A6;font-family:'Sora',sans-serif;letter-spacing:.04em;animation:float 8s ease-in-out infinite .5s;">15+ YRS</div>
     </div>
     <div style="max-width:700px;">
       <div style="display:flex;align-items:center;gap:8px;font-family:'Sora',sans-serif;font-size:13px;color:#9490A6;letter-spacing:.14em;margin-bottom:22px;">
@@ -206,7 +233,7 @@ section[id]{scroll-margin-top:78px;}
             <animateTransform attributeName="transform" type="rotate" from="0 50 8" to="360 50 8" dur="14s" repeatCount="indefinite"/>
           </circle>
         </svg>
-        <div style="position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:22px;">
+        <div data-grid="about-panels" style="position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:22px;">
           <sc-for list="{{ snapshotPanels }}" as="pnl" hint-placeholder-count="4">
             <div style="background:#14111fee;border:1px solid #ffffff16;border-radius:6px;border-top:2px solid {{ pnl.accent }};padding:26px 24px;position:relative;overflow:hidden;min-height:190px;display:flex;flex-direction:column;">
               <div style="position:absolute;top:14px;right:16px;width:6px;height:6px;border-radius:50%;background:{{ pnl.accent }};animation:pulseDot 2.6s ease-in-out infinite;"></div>
@@ -226,7 +253,7 @@ section[id]{scroll-margin-top:78px;}
   </section>
 
   <section id="credentials" data-screen-label="Credentials" style="position:relative;z-index:5;max-width:1200px;margin:0 auto;padding:40px 48px 120px;border-top:1px solid #ffffff26;box-shadow:0 1px 0 #ffffff08;">
-    <svg style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:520px;height:100px;opacity:.11;pointer-events:none;z-index:0;overflow:visible;" viewBox="0 0 520 100">
+    <svg style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:520px;height:100px;opacity:.11;pointer-events:none;z-index:0;overflow:visible;" data-deco="1" aria-hidden="true" viewBox="0 0 520 100">
       <text x="260" y="60" font-size="40" font-weight="700" font-family="'Sora',sans-serif" text-anchor="middle" letter-spacing="24" fill="#EDEAE2">&#931; &#916; &#8711; &#8706; &#955; &#952; &#937; &#960;</text>
     </svg>
     <div style="text-align:center;margin-bottom:56px;">
@@ -235,7 +262,7 @@ section[id]{scroll-margin-top:78px;}
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:64px;" data-grid="cred-badges">
       <sc-for list="{{ credentials }}" as="cred" hint-placeholder-count="4">
-        <div style="background:#14111f;border:1px solid #ffffff14;border-radius:16px;padding:26px 20px 22px;text-align:center;color:#F4F2F8;display:flex;flex-direction:column;height:100%;">
+        <div data-card="credential" style="background:#14111f;border:1px solid #ffffff14;border-radius:16px;padding:26px 20px 22px;text-align:center;color:#F4F2F8;display:flex;flex-direction:column;height:100%;">
           <sc-if value="{{ cred.badge }}" hint-placeholder-val="{{ false }}">
             <img src="{{ cred.badge }}" alt="{{ cred.name }}" style="width:84px;height:84px;object-fit:contain;margin:0 auto 16px;display:block;"/>
           </sc-if>
@@ -252,7 +279,7 @@ section[id]{scroll-margin-top:78px;}
         </div>
       </sc-for>
     </div>
-    <div style="margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+    <div data-grid="cred-capabilities" style="margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:20px;">
       <sc-for list="{{ capabilityGroups }}" as="grp" hint-placeholder-count="2">
         <div style="background:#14111f;border:1px solid #ffffff14;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;height:100%;">
           <div style="height:3px;background:{{ grp.gradient }};"></div>
@@ -327,7 +354,7 @@ section[id]{scroll-margin-top:78px;}
         <div style="font-family:'Sora',sans-serif;color:#C9A227;font-size:13px;letter-spacing:.14em;margin-bottom:14px;">EDUCATION &amp; CREDENTIALS</div>
         <h2 style="font-family:'Sora',sans-serif;font-weight:700;font-size:32px;margin:0;">Qualifications & Verified Learning</h2>
       </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+    <div data-grid="education" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
       <div style="background:#14111f;border:1px solid #ffffff14;border-radius:16px;padding:26px 30px;">
         <div style="font-family:'Sora',sans-serif;color:#C9A227;font-size:12.5px;letter-spacing:.1em;margin-bottom:16px;">HIGHER EDUCATION</div>
         <div style="position:relative;padding-left:18px;">
@@ -538,7 +565,7 @@ section[id]{scroll-margin-top:78px;}
         <p style="max-width:680px;margin:0 auto;color:#9490A6;font-size:15px;line-height:1.65;">A Deliberate Engineering Path, Extending Established Data, Automation and AI Expertise Into Intelligent Systems That Connect Software, Data and the Physical World.</p>
       </div>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:start;margin-bottom:6px;">
+      <div data-grid="future-stages" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:start;margin-bottom:6px;">
         <sc-for list="{{ directionStages }}" as="stg" hint-placeholder-count="3">
           <div style="position:relative;background:#14111f;border:1px solid {{ stg.color }}44;border-radius:16px;padding:38px 22px 26px;">
             <span style="position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:#0B0A11;border:1.5px solid {{ stg.color }};border-radius:10px;padding:6px 16px;font-family:'Sora',sans-serif;font-weight:800;font-size:16px;color:{{ stg.color }};">{{ stg.num }}</span>
@@ -581,7 +608,7 @@ section[id]{scroll-margin-top:78px;}
         </div>
       </div>
 
-      <div style="display:grid;grid-template-columns:0.9fr 1.1fr 0.8fr;gap:20px;margin-bottom:28px;">
+      <div data-grid="future-summary" style="display:grid;grid-template-columns:0.9fr 1.1fr 0.8fr;gap:20px;margin-bottom:28px;">
         <div style="background:#14111f;border:1px solid #7C5CFC33;border-radius:14px;padding:26px;">
           <div style="font-family:'Sora',sans-serif;font-size:32px;color:#7C5CFC;line-height:1;margin-bottom:8px;">&ldquo;</div>
           <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:15px;color:#F4F2F8;margin-bottom:10px;">The direction is deliberate:</div>
@@ -589,7 +616,7 @@ section[id]{scroll-margin-top:78px;}
         </div>
         <div style="background:#14111f;border:1px solid #7C5CFC33;border-radius:14px;padding:24px 26px;">
           <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:12px;letter-spacing:.08em;color:#7C5CFC;margin-bottom:16px;">ENGINEERING TECHNOLOGIES</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div data-grid="future-tech" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
             <sc-for list="{{ engineeringTech }}" as="t" hint-placeholder-count="5">
               <div style="display:flex;align-items:center;gap:10px;padding:9px 12px;border:1px solid #7C5CFC33;border-radius:100px;">
                 <span style="width:8px;height:8px;border-radius:50%;background:#7C5CFC;flex-shrink:0;"></span>
@@ -649,7 +676,7 @@ section[id]{scroll-margin-top:78px;}
         <img src="assets/images/icon-github.png" alt="" style="width:18px;height:18px;border-radius:50%;"/>
         GitHub
       </a>
-      <a href="https://www.credly.com/badges/3848c5d5-0bb0-4324-8ac2-0b7d65bf79f7/public_url" style="display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border:1px solid #ffffff2a;border-radius:100px;font-family:'Sora',sans-serif;font-weight:600;font-size:14.5px;color:#F4F2F8;transition:border-color .15s ease,transform .15s ease;" style-hover="border-color:#C9A227;transform:scale(1.05);" style-active="transform:scale(0.97);">
+      <a href="#" style="display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border:1px solid #ffffff2a;border-radius:100px;font-family:'Sora',sans-serif;font-weight:600;font-size:14.5px;color:#F4F2F8;transition:border-color .15s ease,transform .15s ease;" style-hover="border-color:#C9A227;transform:scale(1.05);" style-active="transform:scale(0.97);">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.8"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.5 7 21l5-2 5 2-1.5-7.5"/></svg>
         Credly
       </a>
@@ -689,7 +716,7 @@ section[id]{scroll-margin-top:78px;}
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { active: 'home', activeCat: 'ALL SYSTEMS', showBackToTop: false, scrolled: false };
+  state = { active: 'home', activeCat: 'ALL SYSTEMS', showBackToTop: false, scrolled: false, mobileNavOpen: false };
 
   componentDidMount() {
     this.sections = ['home','about','credentials','experience','education','publications','work','future','contact'];
@@ -704,7 +731,8 @@ class Component extends DCLogic {
           if (el.getBoundingClientRect().top - navH <= 30) current = id;
         }
       }
-      if (current !== this.state.active) this.setState({ active: current });
+      const pendingUntil = this.pendingNavUntil || 0;
+      if (Date.now() >= pendingUntil && current !== this.state.active) this.setState({ active: current });
       const scrollY = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
       const showBackToTop = scrollY > 450;
       if (showBackToTop !== this.state.showBackToTop) this.setState({ showBackToTop });
@@ -732,6 +760,18 @@ class Component extends DCLogic {
     };
   }
 
+  scrollToIdAndClose(id) {
+    return (e) => {
+      this.pendingNavUntil = Date.now() + 800;
+      this.setState({ active: id, mobileNavOpen: false });
+      this.scrollToId(id)(e);
+    };
+  }
+
+  toggleMobileNav() {
+    this.setState(s => ({ mobileNavOpen: !s.mobileNavOpen }));
+  }
+
   backToTop() {
     const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const behavior = reduced ? 'auto' : 'smooth';
@@ -742,6 +782,10 @@ class Component extends DCLogic {
 
   navLinkStyle(active) {
     return `padding:8px 2px 10px;font-family:'Sora',sans-serif;font-size:13.5px;font-weight:600;letter-spacing:.01em;color:${active ? '#F4F2F8' : '#9490A6'};border-bottom:2px solid ${active ? '#C9A227' : 'transparent'};margin:0 12px;`;
+  }
+
+  mobileNavLinkStyle(active) {
+    return `padding:13px 6px;font-family:'Sora',sans-serif;font-size:15px;font-weight:600;letter-spacing:.01em;color:${active ? '#F4F2F8' : '#D7D3E3'};border-bottom:1px solid #ffffff0f;min-height:44px;display:flex;align-items:center;border-radius:6px;`;
   }
 
   segStyle(filled) {
@@ -758,7 +802,9 @@ class Component extends DCLogic {
     const navItems = navDefs.map(([id,label]) => ({
       href: '#' + id, label,
       onClick: this.scrollToId(id),
-      style: this.navLinkStyle(active === id)
+      onClickMobile: this.scrollToIdAndClose(id),
+      style: this.navLinkStyle(active === id),
+      mobileStyle: this.mobileNavLinkStyle(active === id)
     }));
 
     const footerNavDefs = [['about','About'],['experience','Experience'],['credentials','Credentials'],['work','Engineering Work'],['future','Building Toward'],['contact','Contact']];
@@ -988,6 +1034,9 @@ class Component extends DCLogic {
       scrollTo_home: this.scrollToId('home'),
       scrollTo_credentials: this.scrollToId('credentials'),
       backToTop: () => this.backToTop(),
+      mobileNavOpen: this.state.mobileNavOpen,
+      toggleMobileNav: () => this.toggleMobileNav(),
+      mobileMenuStyle: `position:absolute;top:100%;left:0;right:0;z-index:19;display:${this.state.mobileNavOpen ? 'flex' : 'none'};flex-direction:column;gap:2px;padding:10px 20px 18px;background:#0B0A11f5;border-bottom:1px solid #C9A22733;backdrop-filter:blur(14px);max-height:calc(100vh - 60px);overflow-y:auto;`,
       navBarStyle: `position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:${this.state.scrolled ? '10px 48px' : '16px 48px'};background:${this.state.scrolled ? '#0B0A11f5' : '#0B0A11ee'};backdrop-filter:blur(${this.state.scrolled ? '14px' : '10px'});border-bottom:1px solid ${this.state.scrolled ? '#C9A22733' : '#ffffff12'};flex-wrap:wrap;transition:padding .25s ease,background .25s ease,border-color .25s ease;`,
       backToTopStyle: `position:fixed;bottom:32px;right:32px;z-index:30;width:44px;height:44px;border-radius:50%;background:linear-gradient(145deg,#C9A227,#7C5CFC);border:1px solid #C9A22766;box-shadow:0 4px 20px #00000066,0 0 0 1px #ffffff0d inset;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:opacity .3s ease,transform .3s ease;opacity:${this.state.showBackToTop ? 1 : 0};transform:translateY(${this.state.showBackToTop ? '0' : '10px'});pointer-events:${this.state.showBackToTop ? 'auto' : 'none'};`
     };
