@@ -40,24 +40,24 @@ This project is being developed incrementally using Git, GitHub, and modern soft
 
 ## Phase 2 – Modernization
 
-- [ ] Improve UI and UX
-- [ ] Improve mobile responsiveness
-- [ ] Accessibility improvements
-- [ ] Performance optimization
-- [ ] Code refactoring
-- [ ] Recruiter-focused design
+- [X] Improve UI and UX
+- [X] Improve mobile responsiveness
+- [X] Accessibility improvements
+- [X] Performance optimization
+- [X] Code refactoring
+- [X] Recruiter-focused design
 
 ## Phase 3 – Professional Engineering Hub
 
-- [ ] Featured engineering projects
-- [ ] GitHub activity integration
-- [ ] Technical certifications
-- [ ] Engineering journal
-- [ ] Research publications
-- [ ] Architecture diagrams
-- [ ] Skills dashboard
-- [ ] Downloadable CV
-- [ ] Contact page
+- [X] Featured engineering projects
+- [X] GitHub activity integration
+- [X] Technical certifications
+- [X] Engineering journal
+- [X] Research publications
+- [X] Architecture diagrams
+- [X] Skills dashboard
+- [X] Downloadable CV
+- [X] Contact page
 
 ## Phase 4 – Open Source Ecosystem
 
